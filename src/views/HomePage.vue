@@ -1,10 +1,11 @@
-<script setup>
-import { ref } from 'vue'
-const title = ref('Hello There ✋')
-</script>
+<script setup></script>
 
 <template>
-  <main class="flex min-h-screen items-center justify-center">
-    <h1 class="text-6xl font-thin text-slate-800">{{ title }}</h1>
-  </main>
+  <div class="nav">
+    <RouterLink to="/">Home</RouterLink> |
+    <RouterLink to="/question/category/x">Question</RouterLink>
+  </div>
+  <div>
+    <h1 class="text-6xl font-thin">I'm The Home Page</h1>
+  </div>
 </template>
