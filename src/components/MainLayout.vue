@@ -6,7 +6,7 @@ import MainScore from '@/components/MainScore.vue'
 <template>
   <TitleBar>
     <template #logo>
-      <img src="logo.svg" alt="logo" />
+      <img src="/logo.svg" alt="logo" />
     </template>
     Triviatastic
   </TitleBar>
@@ -32,7 +32,7 @@ import MainScore from '@/components/MainScore.vue'
 main {
   @apply flex h-5/6 items-center justify-center;
   & .card {
-    @apply flex w-11/12 flex-col items-center gap-16 overflow-auto rounded-lg bg-slate-600 p-8 text-slate-200 shadow-lg;
+    @apply flex h-5/6 w-11/12 flex-col items-center gap-16 overflow-auto rounded-lg bg-slate-600 p-8 text-slate-200 shadow-lg;
   }
 }
 </style>
