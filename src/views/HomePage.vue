@@ -1,6 +1,8 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import useAPI from '@/composables/useAPI'
+import TitleBar from '@/components/TitleBar.vue'
+
 const api = useAPI()
 const categories = ref([])
 onMounted(async () => {
@@ -9,6 +11,7 @@ onMounted(async () => {
 </script>
 
 <template>
+  <TitleBar>Triviantastic</TitleBar>
   <div class="categories">
     <RouterLink
       v-for="category in categories"
@@ -26,10 +29,12 @@ onMounted(async () => {
   @apply grid flex-grow grid-cols-4 gap-4;
 
   & .category {
-    @apply flex h-32 items-center justify-center rounded-lg border-4 border-slate-900 p-4 text-center font-bold uppercase transition-colors duration-300;
+    @apply flex h-32 items-center justify-center rounded-lg p-4 text-center font-bold uppercase transition-colors duration-300;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.537), -4px -4px 8px rgba(255, 255, 255, 0.071);
 
     &:hover {
-      @apply cursor-pointer bg-slate-900;
+      @apply cursor-pointer;
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.537), inset -2px -2px 2px rgba(255, 255, 255, 0.071);
     }
   }
 }
