@@ -4,7 +4,12 @@ import MainScore from '@/components/MainScore.vue'
 </script>
 
 <template>
-  <TitleBar />
+  <TitleBar>
+    <template #logo>
+      <img src="logo.svg" alt="logo" />
+    </template>
+    Triviatastic
+  </TitleBar>
   <main>
     <div class="card">
       <RouterView />

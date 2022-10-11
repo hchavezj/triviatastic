@@ -1,3 +1,6 @@
+<script setup>
+import TitleBar from '@/components/TitleBar.vue'
+</script>
 <template>
-  <h1 class="text-6xl font-thin">I'm The Qustion Page</h1>
+  <TitleBar>I'm The Question Page</TitleBar>
 </template>

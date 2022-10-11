@@ -2,9 +2,11 @@
 
 <template>
   <div class="brand">
-    <img class="logo" src="logo.svg" alt="logo" />
-    <h1 class="title">Triviantastic</h1>
-    <img class="logo" src="logo.svg" alt="logo" />
+    <slot name="logo" />
+    <h1 class="title">
+      <slot />
+    </h1>
+    <slot name="logo" />
   </div>
 </template>
 
@@ -12,7 +14,7 @@
 .brand {
   @apply m-0 flex items-center justify-center gap-4 pt-5 pb-5;
 
-  & .logo {
+  & :slotted(img) {
     @apply h-16 w-16;
   }
   & .title {
