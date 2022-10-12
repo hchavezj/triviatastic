@@ -3,10 +3,10 @@ import { onMounted, ref } from 'vue'
 import useAPI from '@/composables/useAPI'
 import TitleBar from '@/components/TitleBar.vue'
 
-const api = useAPI()
-const categories = ref([])
+const { categories, getCategories } = useAPI()
+
 onMounted(async () => {
-  categories.value = await api.getCategories()
+  await getCategories()
 })
 </script>
 
